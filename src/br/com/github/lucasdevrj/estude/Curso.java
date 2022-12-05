@@ -11,4 +11,15 @@ public class Curso {
 	private String instrutor;
 	private String ementa;
 	private String habilidadesDesenvolvidas;
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		if (this.nome.isEmpty() || this.nome == null) {
+			throw new NullPointerException();
+		}
+		this.nome = nome;
+	}
 }
