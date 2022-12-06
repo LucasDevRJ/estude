@@ -12,6 +12,12 @@ public class Categoria {
 	private String hexadecimal;
 	
 	public Categoria(String nome, String codigo, String descricao, String guia, Indicacao indicacao, Integer ordem, String urlImagem, String hexadecimal) {
+		if (nome.isEmpty() || nome == null) {
+			throw new NullPointerException();
+		}
+		
+		
+		
 		this.nome = nome;
 		this.codigo = codigo;
 		this.descricao = descricao;
