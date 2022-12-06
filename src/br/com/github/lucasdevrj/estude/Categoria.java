@@ -7,4 +7,6 @@ public class Categoria {
 	private String descricao;
 	private String guia;
 	private Indicacao indicacao;
+	private String urlImagem;
+	private String hexadecimal;
 }
