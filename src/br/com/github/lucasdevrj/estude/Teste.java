@@ -6,11 +6,13 @@ public class Teste {
 		Curso curso = new Curso();
 		try {
 			curso.setNome("Orientação a Objetos");
+			curso.setCodigo("AAA");
 		} catch (NullPointerException | IllegalArgumentException erro) {
 			erro.printStackTrace();
 		}
 		
 		System.out.println(curso.getNome());
+		System.out.println(curso.getCodigo());
 	}
 
 }

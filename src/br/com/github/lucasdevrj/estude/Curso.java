@@ -12,14 +12,25 @@ public class Curso {
 	private String ementa;
 	private String habilidadesDesenvolvidas;
 	
+	public Curso(String nome, String codigo, Date tempoHoras, String publicoAlvo, String instrutor, String ementa, String habilidadesDesenvolvidas) {
+		if (nome.isEmpty() || nome == null) {
+			throw new NullPointerException();
+		}
+		
+		this.nome = nome;
+		this.codigo = codigo;
+		this.tempoHoras = tempoHoras;
+		this.publicoAlvo = publicoAlvo;
+		this.instrutor = instrutor;
+		this.ementa = ementa;
+		this.habilidadesDesenvolvidas = habilidadesDesenvolvidas;
+	}
+
 	public String getNome() {
 		return nome;
 	}
 	
 	public void setNome(String nome) {
-		if (nome.isEmpty() || nome == null) {
-			throw new NullPointerException();
-		}
 		this.nome = nome;
 	}
 	
@@ -28,6 +39,9 @@ public class Curso {
 	}
 	
 	public void setCodigo(String codigo) {
+		if (codigo.isEmpty() || codigo.matches(codigo)) {
+			throw new IllegalArgumentException();
+		}
 		this.codigo = codigo;
 	}
 	
