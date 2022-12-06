@@ -8,6 +8,27 @@ public class Alternativa {
 	private String justificativa;
 	private Questao questao;
 	
+	public Alternativa(String texto, int ordem, String indicacao, String justificativa, Questao questao) {
+		
+		if (texto.isEmpty() || texto == null) {
+			throw new NullPointerException();
+		}
+		
+		if (indicacao.isEmpty() || indicacao == null) {
+			throw new NullPointerException();
+		}
+		
+		if (questao.equals(null)) {
+			throw new NullPointerException();
+		}
+		
+		this.texto = texto;
+		this.ordem = ordem;
+		this.indicacao = indicacao;
+		this.justificativa = justificativa;
+		this.questao = questao;
+	}
+
 	public String getTexto() {
 		return texto;
 	}
