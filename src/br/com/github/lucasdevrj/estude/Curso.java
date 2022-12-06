@@ -7,13 +7,22 @@ public class Curso {
 	private String nome;
 	private String codigo;
 	private Date tempoHoras;
+	private Visibilidade visibilidade;
 	private String publicoAlvo;
 	private String instrutor;
 	private String ementa;
 	private String habilidadesDesenvolvidas;
 	
-	public Curso(String nome, String codigo, Date tempoHoras, String publicoAlvo, String instrutor, String ementa, String habilidadesDesenvolvidas) {
+	public Curso(String nome, String codigo, Date tempoHoras, Visibilidade visibilidade, String publicoAlvo, String instrutor, String ementa, String habilidadesDesenvolvidas) {
 		if (nome.isEmpty() || nome == null) {
+			throw new NullPointerException();
+		}
+		
+		if (tempoHoras.getHours() < 1 && tempoHoras.getHours() > 20) {
+			throw new IllegalArgumentException();
+		}
+		
+		if (instrutor.isEmpty() || instrutor == null) {
 			throw new NullPointerException();
 		}
 		
@@ -39,9 +48,6 @@ public class Curso {
 	}
 	
 	public void setCodigo(String codigo) {
-		if (codigo.isEmpty() || codigo.matches(codigo)) {
-			throw new IllegalArgumentException();
-		}
 		this.codigo = codigo;
 	}
 	
@@ -51,6 +57,14 @@ public class Curso {
 	
 	public void setTempoHoras(Date tempoHoras) {
 		this.tempoHoras = tempoHoras;
+	}
+	
+	public Visibilidade getVisibilidade() {
+		return visibilidade;
+	}
+	
+	public void setVisibilidade(Visibilidade visibilidade) {
+		this.visibilidade = visibilidade;
 	}
 	
 	public String getPublicoAlvo() {
