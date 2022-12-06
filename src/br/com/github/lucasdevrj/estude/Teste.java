@@ -6,7 +6,7 @@ public class Teste {
 		Curso curso = null;
 		
 		try {
-			curso = new Curso("Orientação a Objetos", "fdfd", 0, null, null, "Niko Steppat", null, null);
+			curso = new Curso("Orientação a Objetos", "fdfdDFDF", 0, null, null, "Niko Steppat", null, null);
 		} catch (NullPointerException | IllegalArgumentException erro) {
 			erro.printStackTrace();
 		}

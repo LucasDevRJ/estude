@@ -5,6 +5,9 @@ public class Explicacao {
 	private String explicacao;
 	
 	public Explicacao(String explicacao) {
+		if (explicacao.isEmpty() || explicacao == null) {
+			throw new NullPointerException();
+		}
 		this.explicacao = explicacao;
 	}
 	

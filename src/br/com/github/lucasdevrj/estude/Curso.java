@@ -17,7 +17,7 @@ public class Curso {
 			throw new NullPointerException();
 		}
 		
-		if (codigo.isEmpty() || !codigo.matches("[a-z]+")) {
+		if (codigo.isEmpty() || !codigo.matches("[a-z0-9-]+")) {
 			throw new IllegalArgumentException();
 		}
 		
