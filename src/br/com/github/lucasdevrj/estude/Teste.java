@@ -1,14 +1,12 @@
 package br.com.github.lucasdevrj.estude;
 
-import java.util.Date;
-
 public class Teste {
 
 	public static void main(String[] args) {
 		Curso curso = null;
 		
 		try {
-			curso = new Curso("Orientação a Objetos", "", new Date(), Visibilidade.PUBLICO, "", "Niko Steppat", "", "");
+			curso = new Curso("Orientação a Objetos", "fdfd", 0, null, null, "Niko Steppat", null, null);
 		} catch (NullPointerException | IllegalArgumentException erro) {
 			erro.printStackTrace();
 		}

@@ -6,12 +6,12 @@ public class Categoria {
 	private String codigo;
 	private String descricao;
 	private String guia;
-	private Indicacao indicacao;
-	private Integer ordem;
+	private String indicacao = "não";
+	private int ordem;
 	private String urlImagem;
 	private String hexadecimal;
 	
-	public Categoria(String nome, String codigo, String descricao, String guia, Indicacao indicacao, Integer ordem, String urlImagem, String hexadecimal) {
+	public Categoria(String nome, String codigo, String descricao, String guia, String indicacao, int ordem, String urlImagem, String hexadecimal) {
 		if (nome.isEmpty() || nome == null) {
 			throw new NullPointerException();
 		}
@@ -60,19 +60,19 @@ public class Categoria {
 		this.guia = guia;
 	}
 	
-	public Indicacao getIndicacao() {
+	public String getIndicacao() {
 		return indicacao;
 	}
 	
-	public void setIndicacao(Indicacao indicacao) {
+	public void setIndicacao(String indicacao) {
 		this.indicacao = indicacao;
 	}
 	
-	public Integer getOrdem() {
+	public int getOrdem() {
 		return ordem;
 	}
 	
-	public void setOrdem(Integer ordem) {
+	public void setOrdem(int ordem) {
 		this.ordem = ordem;
 	}
 	

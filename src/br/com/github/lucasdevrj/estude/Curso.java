@@ -1,24 +1,27 @@
 package br.com.github.lucasdevrj.estude;
 
-import java.util.Date;
 
 public class Curso {
 
 	private String nome;
 	private String codigo;
-	private Date tempoHoras;
-	private Visibilidade visibilidade;
+	private int tempoHoras;
+	private String visibilidade = "privado";
 	private String publicoAlvo;
 	private String instrutor;
 	private String ementa;
 	private String habilidadesDesenvolvidas;
 	
-	public Curso(String nome, String codigo, Date tempoHoras, Visibilidade visibilidade, String publicoAlvo, String instrutor, String ementa, String habilidadesDesenvolvidas) {
+	public Curso(String nome, String codigo, int tempoHoras, String visibilidade, String publicoAlvo, String instrutor, String ementa, String habilidadesDesenvolvidas) {
 		if (nome.isEmpty() || nome == null) {
 			throw new NullPointerException();
 		}
 		
-		if (tempoHoras.getHours() < 1 && tempoHoras.getHours() > 20) {
+		if (codigo.isEmpty() || !codigo.matches("[a-z]+")) {
+			throw new IllegalArgumentException();
+		}
+		
+		if (tempoHoras < 1 && tempoHoras > 20) {
 			throw new IllegalArgumentException();
 		}
 		
@@ -51,19 +54,19 @@ public class Curso {
 		this.codigo = codigo;
 	}
 	
-	public Date getTempoHoras() {
+	public int getTempoHoras() {
 		return tempoHoras;
 	}
 	
-	public void setTempoHoras(Date tempoHoras) {
+	public void setTempoHoras(int tempoHoras) {
 		this.tempoHoras = tempoHoras;
 	}
 	
-	public Visibilidade getVisibilidade() {
+	public String getVisibilidade() {
 		return visibilidade;
 	}
 	
-	public void setVisibilidade(Visibilidade visibilidade) {
+	public void setVisibilidade(String visibilidade) {
 		this.visibilidade = visibilidade;
 	}
 	
