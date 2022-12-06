@@ -16,7 +16,9 @@ public class Categoria {
 			throw new NullPointerException();
 		}
 		
-		
+		if (codigo.isEmpty() || !codigo.matches("[a-z]+")) {
+			throw new IllegalArgumentException();
+		}
 		
 		this.nome = nome;
 		this.codigo = codigo;
