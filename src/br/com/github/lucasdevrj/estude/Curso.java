@@ -17,9 +17,57 @@ public class Curso {
 	}
 	
 	public void setNome(String nome) {
-		if (this.nome.isEmpty() || this.nome == null) {
+		if (nome.isEmpty() || nome == null) {
 			throw new NullPointerException();
 		}
 		this.nome = nome;
+	}
+	
+	public String getCodigo() {
+		return codigo;
+	}
+	
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+	
+	public Date getTempoHoras() {
+		return tempoHoras;
+	}
+	
+	public void setTempoHoras(Date tempoHoras) {
+		this.tempoHoras = tempoHoras;
+	}
+	
+	public String getPublicoAlvo() {
+		return publicoAlvo;
+	}
+	
+	public void setPublicoAlvo(String publicoAlvo) {
+		this.publicoAlvo = publicoAlvo;
+	}
+	
+	public String getInstrutor() {
+		return instrutor;
+	}
+	
+	public void setInstrutor(String instrutor) {
+		this.instrutor = instrutor;
+	}
+	
+	public String getEmenta() {
+		return ementa;
+	}
+	
+	public void setEmenta(String ementa) {
+		this.ementa = ementa;
+	}
+	
+	public String getHabilidadesDesenvolvidas() {
+		return habilidadesDesenvolvidas;
+	}
+	
+	public void setHabilidadesDesenvolvidas(String habilidadesDesenvolvidas) {
+		this.habilidadesDesenvolvidas = habilidadesDesenvolvidas;
 	}
 }
