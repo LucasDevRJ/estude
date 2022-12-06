@@ -11,6 +11,17 @@ public class Categoria {
 	private String urlImagem;
 	private String hexadecimal;
 	
+	public Categoria(String nome, String codigo, String descricao, String guia, Indicacao indicacao, Integer ordem, String urlImagem, String hexadecimal) {
+		this.nome = nome;
+		this.codigo = codigo;
+		this.descricao = descricao;
+		this.guia = guia;
+		this.indicacao = indicacao;
+		this.ordem = ordem;
+		this.urlImagem = urlImagem;
+		this.hexadecimal = hexadecimal;
+	}
+
 	public String getNome() {
 		return nome;
 	}
