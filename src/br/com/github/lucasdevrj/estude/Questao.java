@@ -5,6 +5,11 @@ public class Questao {
 	private String enunciado;
 	private String tipo = "Resposta unica";
 	
+	public Questao(String enunciado, String tipo) {
+		this.enunciado = enunciado;
+		this.tipo = tipo;
+	}
+	
 	public String getEnunciado() {
 		return enunciado;
 	}
