@@ -9,6 +9,28 @@ public class Secao {
 	private String indicacaoProva = "não";
 	private Curso curso;
 	
+	public Secao(String nome, String codigo, int ordem, String indicacaoAtiva, String indicacaoProva, Curso curso) {
+		
+		if (nome.isEmpty() || nome == null) {
+			throw new NullPointerException();
+		}
+		
+		if (codigo.isEmpty() || !codigo.matches("[a-z0-9-]+")) {
+			throw new IllegalArgumentException();
+		}
+		
+		if (curso.equals(null)) {
+			throw new NullPointerException();
+		}
+		
+		this.nome = nome;
+		this.codigo = codigo;
+		this.ordem = ordem;
+		this.indicacaoAtiva = indicacaoAtiva;
+		this.indicacaoProva = indicacaoProva;
+		this.curso = curso;
+	}
+
 	public String getNome() {
 		return nome;
 	}
