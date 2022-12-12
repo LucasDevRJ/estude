@@ -5,9 +5,10 @@ public class Video {
 	private String url;
 	private int minutos;
 	private String transcricao;
-	
+
+	//Corrigir/criar construtor
 	public Video(String url, int minutos, String transcricao) {
-		
+		//mesma coisa sobre validações
 		if (url.isEmpty() || url == null) {
 			throw new NullPointerException();
 		}
@@ -40,4 +41,7 @@ public class Video {
 	public void setTranscricao(String transcricao) {
 		this.transcricao = transcricao;
 	}
+
+
+	//implementar toString
 }
