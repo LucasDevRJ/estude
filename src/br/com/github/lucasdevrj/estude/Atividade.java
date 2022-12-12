@@ -6,11 +6,15 @@ public class Atividade {
 	private String codigo;
 	private String indicacao = "inativa";
 	private int ordem;
+
+	//variável deveria se chamr tipo e pode ser Explicacao, Video, questão, criar herança com uma classe chamada tipo de atividade
 	private Explicacao explicacao;
 	private Secao secao;
-	
+
+
+	//Construtor com os atributos obrigatórios
 	public Atividade(String titulo, String codigo, String indicacao, int ordem, Explicacao explicacao, Secao secao) {
-		
+		//classes com validações
 		if (titulo.isEmpty() || titulo == null) {
 			throw new NullPointerException();
 		}
