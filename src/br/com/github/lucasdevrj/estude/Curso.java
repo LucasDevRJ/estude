@@ -8,23 +8,29 @@ public class Curso {
 	private int tempoHoras;
 	private String visibilidade = "privado";
 	private String publicoAlvo;
+	//Deve ser uma classe
 	private String instrutor;
 	private String ementa;
 	private String habilidadesDesenvolvidas;
 	
+	//Criar construtor só com os atributos obrigatórios.
 	public Curso(String nome, String codigo, int tempoHoras, String visibilidade, String publicoAlvo, String instrutor, String ementa, String habilidadesDesenvolvidas) {
+		
+		//Criar classe só para fazer validações
 		if (nome == null || nome.isEmpty()) {
+			//"Mudar para IllegalArgu... e adicionar mensagem de erro"
 			throw new NullPointerException();
 		}
 		
 		if (codigo.isEmpty() || !codigo.matches("[a-z0-9-]+")) {
+			//colocar mensagem de erro
 			throw new IllegalArgumentException();
 		}
 		
 		if (tempoHoras < 1 && tempoHoras > 20) {
 			throw new IllegalArgumentException();
 		}
-		
+		//inverter condição
 		if (instrutor.isEmpty() || instrutor == null) {
 			throw new NullPointerException();
 		}
@@ -101,4 +107,6 @@ public class Curso {
 	public void setHabilidadesDesenvolvidas(String habilidadesDesenvolvidas) {
 		this.habilidadesDesenvolvidas = habilidadesDesenvolvidas;
 	}
+
+	//Fazer o toString
 }
