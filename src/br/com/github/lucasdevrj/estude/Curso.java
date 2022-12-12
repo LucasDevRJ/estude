@@ -9,7 +9,7 @@ public class Curso {
 	private String visibilidade = "privado";
 	private String publicoAlvo;
 	//Deve ser uma classe
-	private String instrutor;
+	private Instrutor instrutor;
 	private String ementa;
 	private String habilidadesDesenvolvidas;
 	
