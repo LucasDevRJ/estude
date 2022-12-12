@@ -8,7 +8,7 @@ public class Secao {
 	private String indicacaoAtiva = "inativa";
 	private String indicacaoProva = "não";
 	private Curso curso;
-	
+	//muitas alteraçoes parecidas com a do Curso
 	public Secao(String nome, String codigo, int ordem, String indicacaoAtiva, String indicacaoProva, Curso curso) {
 		
 		if (nome.isEmpty() || nome == null) {
