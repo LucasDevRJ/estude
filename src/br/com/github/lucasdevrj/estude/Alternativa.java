@@ -7,9 +7,10 @@ public class Alternativa {
 	private String indicacao;
 	private String justificativa;
 	private Questao questao;
-	
+
+	//construtor com atributos obrigatórios
 	public Alternativa(String texto, int ordem, String indicacao, String justificativa, Questao questao) {
-		
+		//classe com validações
 		if (texto.isEmpty() || texto == null) {
 			throw new NullPointerException();
 		}
@@ -68,4 +69,6 @@ public class Alternativa {
 	public void setQuestao(Questao questao) {
 		this.questao = questao;
 	}
+
+	//toString
 }
