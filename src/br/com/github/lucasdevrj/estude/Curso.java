@@ -6,7 +6,7 @@ public class Curso {
 	private String nome;
 	private String codigo;
 	private int tempoHoras;
-	private String visibilidade = "privado";
+	private boolean visibilidadePrivada = true;
 	private String publicoAlvo;
 	//Deve ser uma classe
 	private Instrutor instrutor;
@@ -14,7 +14,13 @@ public class Curso {
 	private String habilidadesDesenvolvidas;
 	
 	//Criar construtor só com os atributos obrigatórios.
-	
+	public Curso(String nome, String codigo, int tempoHoras, Instrutor instrutor) {
+		Validacao.validaDados(nome, codigo, tempoHoras, instrutor);
+		this.nome = nome;
+		this.codigo = codigo;
+		this.tempoHoras = tempoHoras;
+		this.instrutor = instrutor;
+	}
 
 	public String getNome() {
 		return nome;
@@ -40,12 +46,12 @@ public class Curso {
 		this.tempoHoras = tempoHoras;
 	}
 	
-	public String getVisibilidade() {
-		return visibilidade;
+	public boolean isVisibilidadePrivada() {
+		return visibilidadePrivada;
 	}
 	
-	public void setVisibilidade(String visibilidade) {
-		this.visibilidade = visibilidade;
+	public void setVisibilidadePrivada(boolean visibilidadePrivada) {
+		this.visibilidadePrivada = visibilidadePrivada;
 	}
 	
 	public String getPublicoAlvo() {
@@ -56,12 +62,12 @@ public class Curso {
 		this.publicoAlvo = publicoAlvo;
 	}
 	
-	public String getInstrutor() {
-		return instrutor;
+	public void setInstrutor(Instrutor instrutor) {
+		this.instrutor = instrutor;
 	}
 	
-	public void setInstrutor(String instrutor) {
-		this.instrutor = instrutor;
+	public Instrutor getInstrutor() {
+		return instrutor;
 	}
 	
 	public String getEmenta() {
