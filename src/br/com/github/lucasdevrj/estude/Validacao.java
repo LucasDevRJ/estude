@@ -22,4 +22,16 @@ public class Validacao {
 			throw new IllegalArgumentException("Instrutor inválido!");
 		}
 	}
+
+	public static void validaDados(String nome, String codigo) {
+		if (nome == null || nome.isEmpty()) {
+			// "Mudar para IllegalArgu... e adicionar mensagem de erro"
+			throw new IllegalArgumentException("Nome inválido!");
+		}
+
+		if (codigo.isEmpty() || !codigo.matches("[a-z0-9-]+")) {
+			// colocar mensagem de erro
+			throw new IllegalArgumentException("Código inválido!");
+		}
+	}
 }

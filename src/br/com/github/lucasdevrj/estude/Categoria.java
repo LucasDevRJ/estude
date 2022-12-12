@@ -6,76 +6,47 @@ public class Categoria {
 	private String codigo;
 	private String descricao;
 	private String guia;
-	private String indicacao = "não";
+	private boolean indicacaoAtiva = false;
 	private int ordem;
 	private String urlImagem;
 	private String hexadecimal;
-
 	
-
-	public String getNome() {
-		return nome;
-	}
-	
-	public void setNome(String nome) {
+	public Categoria(String nome, String codigo) {
+		Validacao.validaDados(nome, codigo);
 		this.nome = nome;
-	}
-	
-	public String getCodigo() {
-		return codigo;
-	}
-	
-	public void setCodigo(String codigo) {
 		this.codigo = codigo;
-	}
-	
-	public String getDescricao() {
-		return descricao;
 	}
 	
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 	
-	public String getGuia() {
-		return guia;
-	}
-	
 	public void setGuia(String guia) {
 		this.guia = guia;
 	}
 	
-	public String getIndicacao() {
-		return indicacao;
-	}
-	
-	public void setIndicacao(String indicacao) {
-		this.indicacao = indicacao;
-	}
-	
-	public int getOrdem() {
-		return ordem;
+	public void setIndicacaoAtiva(boolean indicacaoAtiva) {
+		this.indicacaoAtiva = indicacaoAtiva;
 	}
 	
 	public void setOrdem(int ordem) {
 		this.ordem = ordem;
 	}
 	
-	public String getUrlImagem() {
-		return urlImagem;
-	}
-	
 	public void setUrlImagem(String urlImagem) {
 		this.urlImagem = urlImagem;
-	}
-	
-	public String getHexadecimal() {
-		return hexadecimal;
 	}
 	
 	public void setHexadecimal(String hexadecimal) {
 		this.hexadecimal = hexadecimal;
 	}
-
-	//toString
+	
+	@Override
+	public String toString() {
+		return "Nome: " + this.nome + "\nCódigo: " + this.codigo
+		+ "\nDescrição: " + this.descricao + "\nGuia: " + this.guia
+		+ "\nIndicação: " + this.indicacaoAtiva + "\nOrdem: " + this.ordem
+		+ "\nUrl Imagem: " + this.urlImagem + "\nHexadecimal: " 
+		+ this.hexadecimal;
+	}
 }
