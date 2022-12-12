@@ -13,7 +13,7 @@ public class Curso {
 	private String habilidadesDesenvolvidas;
 	
 	public Curso(String nome, String codigo, int tempoHoras, String visibilidade, String publicoAlvo, String instrutor, String ementa, String habilidadesDesenvolvidas) {
-		if (nome.isEmpty() || nome == null) {
+		if (nome == null || nome.isEmpty()) {
 			throw new NullPointerException();
 		}
 		
