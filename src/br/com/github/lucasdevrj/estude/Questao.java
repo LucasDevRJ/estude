@@ -1,7 +1,7 @@
 package br.com.github.lucasdevrj.estude;
 
 public class Questao {
-
+//Questão é um tipo de Atividade(classe abstrata)
 	private String enunciado;
 	private String tipo = "Resposta unica";
 	
@@ -25,4 +25,6 @@ public class Questao {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+
+	//toString()
 }
