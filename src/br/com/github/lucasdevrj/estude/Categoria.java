@@ -10,12 +10,13 @@ public class Categoria {
 	private int ordem;
 	private String urlImagem;
 	private String hexadecimal;
-	
+
+	//Construtor só com os atributos obrigatórios
 	public Categoria(String nome, String codigo, String descricao, String guia, String indicacao, int ordem, String urlImagem, String hexadecimal) {
 		if (nome.isEmpty() || nome == null) {
 			throw new NullPointerException();
 		}
-		
+		//regex precisa ser modificado
 		if (codigo.isEmpty() || !codigo.matches("[a-z]+")) {
 			throw new IllegalArgumentException();
 		}
@@ -93,4 +94,6 @@ public class Categoria {
 	public void setHexadecimal(String hexadecimal) {
 		this.hexadecimal = hexadecimal;
 	}
+
+	//toString
 }
