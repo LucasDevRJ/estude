@@ -12,9 +12,11 @@ public class Subcategoria extends AtributosCategoria {
 		Validacao.validaDados(categoria);
 		this.categoria = categoria;
 	}
-	
+
 	@Override
 	public String toString() {
-		return super.toString() + "\nCategoria: " + this.categoria;
+		return "Subcategoria [categoria=" + categoria + "]";
 	}
+	
+	
 }

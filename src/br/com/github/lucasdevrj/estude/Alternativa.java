@@ -11,4 +11,50 @@ public class Alternativa {
 	public Alternativa(String texto, boolean indicacaoCorreta, Questao questao) {
 		Validacao.validaDados(texto, indicacaoCorreta, questao);
 	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+
+	public int getOrdem() {
+		return ordem;
+	}
+
+	public void setOrdem(int ordem) {
+		this.ordem = ordem;
+	}
+
+	public boolean isIndicacaoCorreta() {
+		return indicacaoCorreta;
+	}
+
+	public void setIndicacaoCorreta(boolean indicacaoCorreta) {
+		this.indicacaoCorreta = indicacaoCorreta;
+	}
+
+	public String getJustificativa() {
+		return justificativa;
+	}
+
+	public void setJustificativa(String justificativa) {
+		this.justificativa = justificativa;
+	}
+
+	public Questao getQuestao() {
+		return questao;
+	}
+
+	public void setQuestao(Questao questao) {
+		this.questao = questao;
+	}
+
+	@Override
+	public String toString() {
+		return "Alternativa [texto=" + texto + ", ordem=" + ordem + ", indicacaoCorreta=" + indicacaoCorreta
+				+ ", justificativa=" + justificativa + ", questao=" + questao + "]";
+	}
 }

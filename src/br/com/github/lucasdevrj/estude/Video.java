@@ -22,10 +22,11 @@ public class Video {
 	public void setTranscricao(String transcricao) {
 		this.transcricao = transcricao;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "URL: " + this.url + "\nMinutos: " + this.minutos
-		+ "\nTranscrição: " + this.transcricao;
+		return "Video [url=" + url + ", minutos=" + minutos + ", transcricao=" + transcricao + "]";
 	}
+	
+	
 }

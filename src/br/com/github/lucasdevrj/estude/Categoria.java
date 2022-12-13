@@ -29,10 +29,11 @@ public class Categoria extends AtributosCategoria {
 	public void setIndicacaoAtiva(boolean indicacaoAtiva) {
 		super.setIndicacaoAtiva(false);
 	}
-	
+
 	@Override
 	public String toString() {
-		return super.toString() + "\nURL de Imagem: " + this.urlImagem
-		+ "\nHexadecimal: " + this.hexadecimal;
+		return "Categoria [urlImagem=" + urlImagem + ", hexadecimal=" + hexadecimal + "]";
 	}
+	
+	
 }

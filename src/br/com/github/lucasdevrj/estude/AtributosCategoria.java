@@ -65,8 +65,9 @@ public abstract class AtributosCategoria {
 
 	@Override
 	public String toString() {
-		return "Nome: " + this.nome + "\nCódigo: " + this.codigo
-		+ "\nDescrição: " + this.descricao + "\nGuia: " + this.guia
-		+ "\nIndicação: " + this.indicacaoAtiva + "\nOrdem: " + this.ordem;
+		return "AtributosCategoria [nome=" + nome + ", codigo=" + codigo + ", descricao=" + descricao + ", guia=" + guia
+				+ ", indicacaoAtiva=" + indicacaoAtiva + ", ordem=" + ordem + "]";
 	}
+
+	
 }
