@@ -6,42 +6,26 @@ public class Video {
 	private int minutos;
 	private String transcricao;
 
-	//Corrigir/criar construtor
-	public Video(String url, int minutos, String transcricao) {
-		//mesma coisa sobre validações
-		if (url.isEmpty() || url == null) {
-			throw new NullPointerException();
-		}
-		
+	public Video(String url) {
+		Validacao.validaDados(url);
 		this.url = url;
-		this.minutos = minutos;
-		this.transcricao = transcricao;
-	}
-
-	public String getUrl() {
-		return url;
 	}
 	
 	public void setUrl(String url) {
 		this.url = url;
 	}
 	
-	public int getMinutos() {
-		return minutos;
-	}
-	
 	public void setMinutos(int minutos) {
 		this.minutos = minutos;
-	}
-	
-	public String getTranscricao() {
-		return transcricao;
 	}
 	
 	public void setTranscricao(String transcricao) {
 		this.transcricao = transcricao;
 	}
-
-
-	//implementar toString
+	
+	@Override
+	public String toString() {
+		return "URL: " + this.url + "\nMinutos: " + this.minutos
+		+ "\nTranscrição: " + this.transcricao;
+	}
 }

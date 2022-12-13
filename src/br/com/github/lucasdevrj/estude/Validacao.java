@@ -40,4 +40,10 @@ public class Validacao {
 			throw new IllegalArgumentException("Categoria inválida!");
 		}
 	}
+
+	public static void validaDados(String url) {
+		if (url == null || url.isEmpty()) {
+			throw new IllegalArgumentException("Categoria inválida!");
+		}
+	}
 }
