@@ -4,13 +4,61 @@ public abstract class Atividade {
 
 	private String titulo;
 	private String codigo;
-	private String indicacao = "inativa";
+	private boolean indicacaoAtiva;
 	private int ordem;
-
-	//variável deveria se chamr tipo e pode ser Explicacao, Video, questão, criar herança com uma classe chamada tipo de atividade
-	private TipoAtividade tipo;
 	private Secao secao;
+	
+	public Atividade(String titulo, String codigo) {
+		Validacao.validaDados(titulo, codigo);
+		this.titulo = titulo;
+		this.codigo = codigo;
+	}
 
+	public String getTitulo() {
+		return titulo;
+	}
 
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public boolean isIndicacaoAtiva() {
+		return indicacaoAtiva;
+	}
+
+	public void setIndicacaoAtiva(boolean indicacaoAtiva) {
+		this.indicacaoAtiva = indicacaoAtiva;
+	}
+
+	public int getOrdem() {
+		return ordem;
+	}
+
+	public void setOrdem(int ordem) {
+		this.ordem = ordem;
+	}
+
+	public Secao getSecao() {
+		return secao;
+	}
+
+	public void setSecao(Secao secao) {
+		this.secao = secao;
+	}
+
+	@Override
+	public String toString() {
+		return "TipoAtividade [titulo=" + titulo + ", codigo=" + codigo + ", indicacaoAtiva=" + indicacaoAtiva
+				+ ", ordem=" + ordem + ", secao=" + secao + "]";
+	}
+	
 	
 }

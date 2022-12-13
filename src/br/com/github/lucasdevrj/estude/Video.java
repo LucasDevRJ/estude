@@ -1,14 +1,13 @@
 package br.com.github.lucasdevrj.estude;
 
-public class Video {
+public class Video extends Atividade{
 
 	private String url;
 	private int minutos;
 	private String transcricao;
 
-	public Video(String url) {
-		Validacao.validaDados(url);
-		this.url = url;
+	public Video(String titulo, String codigo) {
+		super(titulo, codigo);
 	}
 	
 	public void setUrl(String url) {

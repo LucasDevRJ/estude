@@ -1,13 +1,12 @@
 package br.com.github.lucasdevrj.estude;
 
-public class Questao {
-//Questão é um tipo de Atividade(classe abstrata)
+public class Questao extends Atividade {
+
 	private String enunciado;
 	private String tipo = "Resposta unica";
 	
-	public Questao(String enunciado, String tipo) {
-		this.enunciado = enunciado;
-		this.tipo = tipo;
+	public Questao(String titulo, String codigo) {
+		super(titulo, codigo);
 	}
 	
 	public String getEnunciado() {
@@ -26,5 +25,8 @@ public class Questao {
 		this.tipo = tipo;
 	}
 
-	//toString()
+	@Override
+	public String toString() {
+		return "Questao [enunciado=" + enunciado + ", tipo=" + tipo + "]";
+	}
 }
