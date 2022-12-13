@@ -15,10 +15,6 @@ public abstract class AtributosCategoria {
 		this.codigo = codigo;
 	}
 	
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
 	public String getNome() {
 		return nome;
 	}
