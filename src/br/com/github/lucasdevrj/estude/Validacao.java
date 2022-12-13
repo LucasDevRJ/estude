@@ -34,4 +34,10 @@ public class Validacao {
 			throw new IllegalArgumentException("Código inválido!");
 		}
 	}
+
+	public static void validaDados(Categoria categoria) {
+		if (categoria == null) {
+			throw new IllegalArgumentException("Categoria inválida!");
+		}
+	}
 }

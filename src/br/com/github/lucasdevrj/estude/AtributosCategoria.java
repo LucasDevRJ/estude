@@ -6,6 +6,7 @@ public abstract class AtributosCategoria {
 	private String codigo;
 	private String descricao;
 	private String guia;
+	private boolean indicacaoAtiva;
 	private int ordem;
 	
 	public AtributosCategoria(String nome, String codigo) {
@@ -42,6 +43,14 @@ public abstract class AtributosCategoria {
 		return guia;
 	}
 	
+	public void setIndicacaoAtiva(boolean indicacaoAtiva) {
+		this.indicacaoAtiva = indicacaoAtiva;
+	}
+	
+	public boolean isIndicacaoAtiva() {
+		return indicacaoAtiva;
+	}
+	
 	public int getOrdem() {
 		return ordem;
 	}
@@ -54,6 +63,6 @@ public abstract class AtributosCategoria {
 	public String toString() {
 		return "Nome: " + this.nome + "\nCódigo: " + this.codigo
 		+ "\nDescrição: " + this.descricao + "\nGuia: " + this.guia
-		+ "\nOrdem: " + this.ordem;
+		+ "\nIndicação: " + this.indicacaoAtiva + "\nOrdem: " + this.ordem;
 	}
 }
