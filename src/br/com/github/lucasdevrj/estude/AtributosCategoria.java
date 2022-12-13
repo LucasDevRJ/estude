@@ -18,43 +18,51 @@ public abstract class AtributosCategoria {
 	public String getNome() {
 		return nome;
 	}
-	
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public String getCodigo() {
 		return codigo;
 	}
-	
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
-	
+
 	public String getDescricao() {
 		return descricao;
 	}
-	
-	public void setGuia(String guia) {
-		this.guia = guia;
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
-	
+
 	public String getGuia() {
 		return guia;
 	}
-	
-	public void setIndicacaoAtiva(boolean indicacaoAtiva) {
-		this.indicacaoAtiva = indicacaoAtiva;
+
+	public void setGuia(String guia) {
+		this.guia = guia;
 	}
-	
+
 	public boolean isIndicacaoAtiva() {
 		return indicacaoAtiva;
 	}
-	
+
+	public void setIndicacaoAtiva(boolean indicacaoAtiva) {
+		this.indicacaoAtiva = indicacaoAtiva;
+	}
+
 	public int getOrdem() {
 		return ordem;
 	}
-	
+
 	public void setOrdem(int ordem) {
 		this.ordem = ordem;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Nome: " + this.nome + "\nCódigo: " + this.codigo

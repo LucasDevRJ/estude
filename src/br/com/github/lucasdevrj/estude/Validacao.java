@@ -46,4 +46,20 @@ public class Validacao {
 			throw new IllegalArgumentException("Categoria inválida!");
 		}
 	}
+
+	public static void validaDados(String texto, boolean indicacaoCorreta, Questao questao) {
+		if (texto == null || texto.isEmpty()) {
+			// "Mudar para IllegalArgu... e adicionar mensagem de erro"
+			throw new IllegalArgumentException("Texto inválido!");
+		}
+
+		if (indicacaoCorreta != true || indicacaoCorreta != false) {
+			// colocar mensagem de erro
+			throw new IllegalArgumentException("Indicação inválida!");
+		}
+  
+		if (questao == null) {
+			throw new IllegalArgumentException("Questão inválida!");
+		}
+	}
 }
