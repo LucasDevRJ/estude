@@ -3,16 +3,9 @@ package br.com.github.lucasdevrj.estude;
 public class Teste {
 
 	public static void main(String[] args) {
-		Curso curso = null;
+		Instrutor instrutor = new Instrutor();
 		
-		try {
-			curso = new Curso("Orientação a Objetos", "fdfd", 0, null, null, "Niko Steppat", null, null);
-		} catch (NullPointerException | IllegalArgumentException erro) {
-			erro.printStackTrace();
-		}
-		
-		System.out.println(curso.getNome());
-		System.out.println(curso.getCodigo());
+		//Todos os erros já foram testados
+		Curso curso = new Curso("Java: OO", "afrg34ff", 10, instrutor);
 	}
-
 }
