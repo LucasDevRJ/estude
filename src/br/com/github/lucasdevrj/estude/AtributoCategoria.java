@@ -1,6 +1,6 @@
 package br.com.github.lucasdevrj.estude;
 
-public abstract class AtributosCategoria {
+public abstract class AtributoCategoria {
 
 	private String nome;
 	private String codigo;
@@ -9,7 +9,7 @@ public abstract class AtributosCategoria {
 	private boolean indicacaoAtiva;
 	private int ordem;
 	
-	public AtributosCategoria(String nome, String codigo) {
+	public AtributoCategoria(String nome, String codigo) {
 		Validacao.validaDados(nome, codigo);
 		this.nome = nome;
 		this.codigo = codigo;

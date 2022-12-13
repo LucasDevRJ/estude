@@ -1,6 +1,6 @@
 package br.com.github.lucasdevrj.estude;
 
-public class Subcategoria extends AtributosCategoria {
+public class Subcategoria extends AtributoCategoria {
 
 	private Categoria categoria;
 	

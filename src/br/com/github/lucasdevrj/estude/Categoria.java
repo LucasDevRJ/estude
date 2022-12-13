@@ -1,6 +1,6 @@
 package br.com.github.lucasdevrj.estude;
 
-public class Categoria extends AtributosCategoria {
+public class Categoria extends AtributoCategoria {
 	
 	private String urlImagem;
 	private String hexadecimal;
