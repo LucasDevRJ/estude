@@ -10,6 +10,9 @@ public class Alternativa {
 
 	public Alternativa(String texto, boolean indicacaoCorreta, Questao questao) {
 		Validacao.validaDados(texto, indicacaoCorreta, questao);
+		this.texto = texto;
+		this.indicacaoCorreta = indicacaoCorreta;
+		this.questao = questao;
 	}
 
 	public String getTexto() {
