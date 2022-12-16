@@ -11,12 +11,12 @@ public class Curso {
 	private String ementa;
 	private String habilidadesDesenvolvidas;
 
-	public Curso(String nome, String codigo, int tempoHoras, Instrutor instrutor) {
+	public Curso(String nome, String codigo, int tempoHoras, String instrutor) {
 		Validacao.validaDados(nome, codigo, tempoHoras, instrutor);
 		this.nome = nome;
 		this.codigo = codigo;
 		this.tempoHoras = tempoHoras;
-		this.instrutor = instrutor;
+		this.instrutor.setNome(instrutor);
 	}
 	
 	public void setVisibilidadePrivada(boolean visibilidadePrivada) {

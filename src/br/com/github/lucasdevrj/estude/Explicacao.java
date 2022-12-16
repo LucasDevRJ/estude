@@ -4,8 +4,8 @@ public class Explicacao extends TipoAtividade {
 	
 	private String explicacao;
 	
-	public Explicacao(String titulo, String codigo) {
-		super(titulo, codigo);
+	public Explicacao(String titulo) {
+		super(titulo);
 	}
 	
 	public String getExplicacao() {

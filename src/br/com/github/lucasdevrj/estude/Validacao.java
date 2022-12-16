@@ -2,7 +2,7 @@ package br.com.github.lucasdevrj.estude;
 
 public class Validacao {
 
-	public static void validaDados(String nome, String codigo, int tempoHoras, Instrutor instrutor) {
+	public static void validaDados(String nome, String codigo, int tempoHoras, String instrutor) {
 		// Criar classe só para fazer validações
 		if (nome == null || nome.isEmpty()) {
 			// "Mudar para IllegalArgu... e adicionar mensagem de erro"
@@ -18,7 +18,7 @@ public class Validacao {
 			throw new IllegalArgumentException("Horário inválido!");
 		}
 		// inverter condição
-		if (instrutor == null) {
+		if (instrutor == null || instrutor.isEmpty()) {
 			throw new IllegalArgumentException("Instrutor inválido!");
 		}
 	}
@@ -76,6 +76,22 @@ public class Validacao {
   
 		if (curso == null) {
 			throw new IllegalArgumentException("Curso inválido!");
+		}
+	}
+
+	public static void validaDados(String titulo, String codigo, Secao secao) {
+		if (titulo == null || titulo.isEmpty()) {
+			// "Mudar para IllegalArgu... e adicionar mensagem de erro"
+			throw new IllegalArgumentException("titulo inválido!");
+		}
+
+		if (codigo.isEmpty() || !codigo.matches("[a-z0-9-]+")) {
+			// colocar mensagem de erro
+			throw new IllegalArgumentException("Código inválido!");
+		}
+  
+		if (secao == null) {
+			throw new IllegalArgumentException("Seção inválida!");
 		}
 	}
 }

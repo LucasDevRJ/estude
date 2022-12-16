@@ -6,8 +6,8 @@ public class Video extends TipoAtividade{
 	private int minutos;
 	private String transcricao;
 
-	public Video(String titulo, String codigo) {
-		super(titulo, codigo);
+	public Video(String titulo) {
+		super(titulo);
 	}
 	
 	public void setUrl(String url) {

@@ -3,15 +3,13 @@ package br.com.github.lucasdevrj.estude;
 public abstract class TipoAtividade {
 
 	private String titulo;
-	private String codigo;
 	private boolean indicacaoAtiva;
 	private int ordem;
 	private Secao secao;
 	
-	public TipoAtividade(String titulo, String codigo) {
-		Validacao.validaDados(titulo, codigo);
+	public TipoAtividade(String titulo) {
+		Validacao.validaDados(titulo);
 		this.titulo = titulo;
-		this.codigo = codigo;
 	}
 
 	public String getTitulo() {
@@ -20,14 +18,6 @@ public abstract class TipoAtividade {
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
-	}
-
-	public String getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
 	}
 
 	public boolean isIndicacaoAtiva() {
@@ -56,9 +46,8 @@ public abstract class TipoAtividade {
 
 	@Override
 	public String toString() {
-		return "TipoAtividade [titulo=" + titulo + ", codigo=" + codigo + ", indicacaoAtiva=" + indicacaoAtiva
-				+ ", ordem=" + ordem + ", secao=" + secao + "]";
+		return "TipoAtividade [titulo=" + titulo + ", indicacaoAtiva=" + indicacaoAtiva + ", ordem=" + ordem
+				+ ", secao=" + secao + "]";
 	}
-	
 	
 }

@@ -5,8 +5,8 @@ public class Questao extends TipoAtividade {
 	private String enunciado;
 	private String tipo = "Resposta unica";
 	
-	public Questao(String titulo, String codigo) {
-		super(titulo, codigo);
+	public Questao(String titulo) {
+		super(titulo);
 	}
 	
 	public String getEnunciado() {

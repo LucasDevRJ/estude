@@ -26,11 +26,6 @@ public class Categoria extends AtributoCategoria {
 	}
 
 	@Override
-	public void setIndicacaoAtiva(boolean indicacaoAtiva) {
-		super.setIndicacaoAtiva(false);
-	}
-
-	@Override
 	public String toString() {
 		return "Categoria [urlImagem=" + urlImagem + ", hexadecimal=" + hexadecimal + "]";
 	}
