@@ -1,6 +1,6 @@
 package br.com.github.lucasdevrj.estude;
 
-public class Video extends Atividade{
+public class Video extends TipoAtividade{
 
 	private String url;
 	private int minutos;

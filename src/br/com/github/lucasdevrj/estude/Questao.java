@@ -1,6 +1,6 @@
 package br.com.github.lucasdevrj.estude;
 
-public class Questao extends Atividade {
+public class Questao extends TipoAtividade {
 
 	private String enunciado;
 	private String tipo = "Resposta unica";
