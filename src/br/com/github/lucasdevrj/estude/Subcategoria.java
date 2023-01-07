@@ -9,7 +9,7 @@ public class Subcategoria extends AtributoCategoria {
 	}
 	
 	public void setCategoria(Categoria categoria) {
-		Validacao.validaDados(categoria);
+		Validacao.validaCategoria(categoria);
 		this.categoria = categoria;
 	}
 

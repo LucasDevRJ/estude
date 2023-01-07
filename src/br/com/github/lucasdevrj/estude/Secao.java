@@ -10,7 +10,9 @@ public class Secao {
 	private Curso curso;
 	
 	public Secao(String nome, String codigo, Curso curso) {
-		Validacao.validaDados(nome, codigo, curso);
+		Validacao.validaPalavra(nome, "Nome inválido!");
+		Validacao.validaCodigo(codigo);
+		Validacao.validaCurso(curso);
 		this.nome = nome;
 		this.codigo = codigo;
 	}

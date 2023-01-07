@@ -1,17 +1,21 @@
 package br.com.github.lucasdevrj.estude;
 
-public abstract class Atividade {
+public class Atividade {
 
 	private String titulo;
 	private String codigo;
-	private boolean indicacaoAtiva;
+	private boolean indicacaoAtiva = false;
 	private int ordem;
+	private TipoAtividade tipo;
 	private Secao secao;
 	
-	public Atividade(String titulo, String codigo) {
-		Validacao.validaDados(titulo, codigo);
+	public Atividade(String titulo, String codigo, Secao secao) {
+		Validacao.validaPalavra(titulo, "Título inválido");
+		Validacao.validaCodigo(codigo);
+		Validacao.validaSecao(secao);
 		this.titulo = titulo;
 		this.codigo = codigo;
+		this.secao = secao;
 	}
 
 	public String getTitulo() {
@@ -46,6 +50,14 @@ public abstract class Atividade {
 		this.ordem = ordem;
 	}
 
+	public TipoAtividade getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoAtividade tipo) {
+		this.tipo = tipo;
+	}
+
 	public Secao getSecao() {
 		return secao;
 	}
@@ -56,9 +68,7 @@ public abstract class Atividade {
 
 	@Override
 	public String toString() {
-		return "TipoAtividade [titulo=" + titulo + ", codigo=" + codigo + ", indicacaoAtiva=" + indicacaoAtiva
-				+ ", ordem=" + ordem + ", secao=" + secao + "]";
+		return "Atividade [titulo=" + titulo + ", codigo=" + codigo + ", indicacaoAtiva=" + indicacaoAtiva + ", ordem="
+				+ ordem + ", tipo=" + tipo + ", secao=" + secao + "]";
 	}
-	
-	
 }

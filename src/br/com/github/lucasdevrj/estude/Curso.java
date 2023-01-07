@@ -11,12 +11,15 @@ public class Curso {
 	private String ementa;
 	private String habilidadesDesenvolvidas;
 
-	public Curso(String nome, String codigo, int tempoHoras, Instrutor instrutor) {
-		Validacao.validaDados(nome, codigo, tempoHoras, instrutor);
+	public Curso(String nome, String codigo, int tempoHoras, String nomeInstrutor) {
+		Validacao.validaPalavra(nome, "Nome inválido");
+		Validacao.validaCodigo(codigo);
+		Validacao.validaTempoHoras(tempoHoras);
+		Validacao.validaPalavra(nomeInstrutor, "Instrutor inválido");
 		this.nome = nome;
 		this.codigo = codigo;
 		this.tempoHoras = tempoHoras;
-		this.instrutor = instrutor;
+		this.instrutor = new Instrutor(nomeInstrutor);
 	}
 	
 	public void setVisibilidadePrivada(boolean visibilidadePrivada) {

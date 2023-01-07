@@ -1,19 +1,18 @@
 package br.com.github.lucasdevrj.estude;
 
-public class Video extends Atividade{
+public class Video extends TipoAtividade{
 
-	private String url;
 	private int minutos;
 	private String transcricao;
 
-	public Video(String titulo, String codigo) {
-		super(titulo, codigo);
+	public Video(String url) {
+		super(url);
 	}
 	
-	public void setUrl(String url) {
-		this.url = url;
+	public String getUrl() {
+		return super.getTexto();
 	}
-	
+
 	public void setMinutos(int minutos) {
 		this.minutos = minutos;
 	}
@@ -24,7 +23,7 @@ public class Video extends Atividade{
 
 	@Override
 	public String toString() {
-		return "Video [url=" + url + ", minutos=" + minutos + ", transcricao=" + transcricao + "]";
+		return "Video [url=" + this.getUrl() + ", minutos=" + minutos + ", transcricao=" + transcricao + "]";
 	}
 	
 	

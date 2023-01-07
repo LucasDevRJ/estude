@@ -10,7 +10,8 @@ public abstract class AtributoCategoria {
 	private int ordem;
 	
 	public AtributoCategoria(String nome, String codigo) {
-		Validacao.validaDados(nome, codigo);
+		Validacao.validaPalavra(nome, "Nome Inválido!");
+		Validacao.validaCodigo(codigo);
 		this.nome = nome;
 		this.codigo = codigo;
 	}
