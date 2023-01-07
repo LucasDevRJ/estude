@@ -2,21 +2,17 @@ package br.com.github.lucasdevrj.estude;
 
 public class Questao extends TipoAtividade {
 
-	private String enunciado;
 	private String tipo = "Resposta unica";
-	
-	public Questao(String titulo) {
-		super(titulo);
+
+	public Questao(String enunciado) {
+		super(enunciado);
 	}
+
 	
 	public String getEnunciado() {
-		return enunciado;
+		return super.getTexto();
 	}
-	
-	public void setEnunciado(String enunciado) {
-		this.enunciado = enunciado;
-	}
-	
+
 	public String getTipo() {
 		return tipo;
 	}
@@ -27,6 +23,6 @@ public class Questao extends TipoAtividade {
 
 	@Override
 	public String toString() {
-		return "Questao [enunciado=" + enunciado + ", tipo=" + tipo + "]";
+		return "Questao [enunciado=" + this.getEnunciado() + ", tipo=" + tipo + "]";
 	}
 }
