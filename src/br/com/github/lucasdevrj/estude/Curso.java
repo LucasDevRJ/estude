@@ -12,6 +12,9 @@ public class Curso {
 	private String habilidadesDesenvolvidas;
 
 	public Curso(String nome, String codigo, int tempoHoras, String instrutor) {
+
+		Validacao.validaNome(nome, "Nome inválido");
+		Validacao.validaCodigo(codigo);
 		Validacao.validaDados(nome, codigo, tempoHoras, instrutor);
 		this.nome = nome;
 		this.codigo = codigo;
