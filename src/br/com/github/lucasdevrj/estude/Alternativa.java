@@ -9,7 +9,7 @@ public class Alternativa {
 	private Questao questao;
 
 	public Alternativa(String texto, boolean indicacaoCorreta, Questao questao) {
-		Validacao.validaPalavra(texto, "Text inválido");
+		Validacao.validaPalavra(texto, "Texto inválido");
 		Validacao.validaQuestao(questao);
 		this.texto = texto;
 		this.indicacaoCorreta = indicacaoCorreta;

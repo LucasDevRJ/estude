@@ -10,7 +10,9 @@ public class Atividade {
 	private Secao secao;
 	
 	public Atividade(String titulo, String codigo, Secao secao) {
-		Validacao.validaDados(titulo, codigo, secao);
+		Validacao.validaPalavra(titulo, "Título inválido");
+		Validacao.validaCodigo(codigo);
+		Validacao.validaSecao(secao);
 		this.titulo = titulo;
 		this.codigo = codigo;
 		this.secao = secao;

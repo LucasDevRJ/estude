@@ -2,25 +2,25 @@ package br.com.github.lucasdevrj.estude;
 
 public class Explicacao extends TipoAtividade {
 	
-	private String explicacao;
+	private String texto;
 	
 	public Explicacao(String titulo) {
 		super(titulo);
 	}
 	
 	public String getExplicacao() {
-		return explicacao;
+		return texto;
 	}
 
 	public void setExplicacao(String explicacao) {
 		if (explicacao == null || explicacao.isEmpty()) {
 			throw new IllegalArgumentException("Explicação inválida!");
 		}
-		this.explicacao = explicacao;
+		this.texto = explicacao;
 	}
 
 	@Override
 	public String toString() {
-		return "Explicacao [explicacao=" + explicacao + "]";
+		return "Explicacao [explicacao=" + texto + "]";
 	}
 }

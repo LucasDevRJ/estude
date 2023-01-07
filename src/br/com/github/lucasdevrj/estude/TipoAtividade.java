@@ -8,7 +8,7 @@ public abstract class TipoAtividade {
 	private Secao secao;
 	
 	public TipoAtividade(String titulo) {
-		Validacao.validaDados(titulo);
+		Validacao.validaPalavra(titulo, "Título inválido");
 		this.titulo = titulo;
 	}
 
